@@ -1,0 +1,113 @@
+/* ===== Global Brand Styles ===== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+}
+
+:root {
+    --brand-primary: #005cfc;
+    --brand-dark: #003a9c;
+    --brand-light: #e9f1ff;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+    background: var(--brand-primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+}
+
+nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* ===== Mobile Menu ===== */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        background: var(--brand-primary);
+        flex-direction: column;
+        padding: 20px;
+    }
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1200&q=80');
+    height: 80vh;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 550px;
+}
+
+/* ===== Sections ===== */
+.section {
+    padding: 60px 25px;
+}
+
+.section h2 {
+    color: var(--brand-dark);
+}
+
+/* Footer */
+footer {
+    background: var(--brand-primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
